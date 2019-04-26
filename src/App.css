@@ -1,3 +1,19 @@
+:root {
+  --dark-blue: '#051937';
+  --lime-gree: #a8eb12;
+  --teal: #00c9b7;
+  --pink: #d16ba5;
+  --lavender: #86a8e7;
+  --robin-blue: #5ffbf1;
+
+  --light-grey: #dee2e6;
+  --lightest-grey: #f1f3f5;
+  --darkest-grey: #495057;
+
+  --boxshadow: 0px 8px 16px rgba(56, 65, 82, 0.15);
+  --boxshadow-secondary: 0px 8px 16px rgba(56, 65, 82, 0.25);
+}
+
 .App {
   text-align: center;
 }
@@ -9,13 +25,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
 }
 
@@ -23,11 +39,48 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section > h1 {
+  font-size: 4.8rem;
+  font-weight: 900;
+  /* color: #495057; */
+}
+
+.card {
+  border-radius: 0.4rem;
+  width: 10rem;
+  height: 10rem;
+  box-shadow: var(--boxshadow-secondary);
+  margin: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+
+.card > p {
+}
+
+/* GRADIENTS EVERYWHERE */
+.bluegreen {
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.pinkblue {
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
 }
