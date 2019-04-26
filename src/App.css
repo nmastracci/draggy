@@ -50,7 +50,8 @@ section > h1 {
   width: 10rem;
   height: 10rem;
   box-shadow: var(--boxshadow-secondary);
-  margin: 1.6rem;
+  margin-bottom: 1.6rem;
+  margin-right: 1.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +66,7 @@ section > h1 {
 .drop-area {
   width: 100vw;
   height: 20rem;
-  background: red;
+  display: flex;
 }
 
 /* GRADIENTS EVERYWHERE */

@@ -1,50 +1,48 @@
 import React, { Component } from 'react';
 
 export default class DragDrop extends Component {
+  state = {
+    dragItem: undefined
+  }
 
-
-  componentDidMount() {
-    let draggingThing;
-    let cardTwo = document.getElementById('cardTwo')
-    let dropArea = document.querySelector('.drop-area');
-    document.addEventListener('dragenter', (event) => {
-      event.preventDefault()
+  dragStart = ({ target }) => {
+    this.setState({
+      dragItem: target
     })
+  }
 
-    dropArea.addEventListener('dragover', (event) => {
-      event.preventDefault()
-    })
-
-    document.addEventListener('drop', (event) => {
-      event.preventDefault()
-      if (event.target.className === "drop-area") {
-        draggingThing.parentNode.removeChild(draggingThing)
-        event.target.appendChild(draggingThing)
-      }
-    }, false)
-
-    cardTwo.addEventListener('dragstart', (event) => {
-      console.log({event})
-      draggingThing = event.target
-    })
+  drop = (event) => {
+    event.preventDefault()
+    const { dragItem } = this.state
+    if (event.target.className === "drop-area") {
+      dragItem.parentNode.removeChild(dragItem)
+      event.target.appendChild(dragItem)
+    }
   }
 
   render () {
     return (
       <React.Fragment>
-        <div className="drag-area">
-          <div
-            draggable={true}
-            id="cardTwo"
-            className="card bluegreen"
-          >TWO</div>
+        <div
+          className="drop-area"
+          onDragOver={(event) => event.preventDefault()}
+          onDrop={this.drop}
+        >
+          {["ONE", "TWO", "THREE"].map((word) => (
+              <div
+                key={word}
+                className="card bluegreen"
+                draggable={true}
+                onDragStart={this.dragStart}
+              >{word}</div>
+            )
+          )}
         </div>
-        <div className="drop-area pinkblue">
-
-        </div>
-        <div>
-
-        </div>
+        <div
+          className="drop-area"
+          onDragOver={(event) => event.preventDefault()}
+          onDrop={this.drop}
+        />
       </React.Fragment>
     )
   }
