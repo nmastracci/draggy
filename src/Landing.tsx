@@ -1,9 +1,9 @@
-import React from 'react'
-import './App.css'
-import DragDrop from './DragDrop'
-import List from './List'
+import React from 'react';
+import './App.css';
+import DragDrop from './DragDrop';
+import List from './List';
 
-const App: React.FC = () => {
+const Landing: React.FC = () => {
   return (
     <div className="App">
       <section>
@@ -16,4 +16,4 @@ const App: React.FC = () => {
   )
 }
 
-export default App
+export default Landing;
