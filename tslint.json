@@ -3,5 +3,9 @@
   "defaultSeverity": "warning",
   "linterOptions": {
     "exclude": ["config/**/*.js", "node_modules/**/*.ts"]
+  },
+  "rules": {
+    "indent": [true, "spaces", 2],
+    "space-within-parens": true
   }
 }
