@@ -1,8 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import Landing from './Landing'
-import * as serviceWorker from './serviceWorker'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import Landing from './Landing';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Landing />, document.getElementById('root'))
 
